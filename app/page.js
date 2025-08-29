@@ -115,6 +115,16 @@ export default function Home() {
       // 0) Save the date
       case 0:
         return (
+          <div className="flex flex-col items-center justify-center text-center px-4">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[8rem] font-extrabold mb-4 text-white drop-shadow-lg">
+              Save the Date!
+            </h1>
+          </div>
+        );
+
+      // 1) Final text + couple image
+      case 1:
+        return (
           <div className="flex flex-col items-center text-center px-4 py-8 w-full max-w-4xl mx-auto">
   <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-6">
     Chandler and Sully <br /> are getting married!
@@ -125,7 +135,6 @@ export default function Home() {
     className="w-full max-w-4xl max-h-[60vh] rounded-lg object-contain mb-6"
   />
 </div>
-
 
 
 
