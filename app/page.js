@@ -126,13 +126,13 @@ export default function Home() {
       case 1:
         return (
           <div className="flex flex-col items-center text-center px-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white drop-shadow-lg mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-6">
               Chandler and Sully are getting married!
             </h2>
             <img
-              src="/Us-WC-Alter.png"
+              src="/US-WC-Alter.png"
               alt="Couple"
-              className="w-full max-w-md sm:max-w-lg rounded-lg object-contain"
+              className="w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg object-contain"
             />
           </div>
         );
