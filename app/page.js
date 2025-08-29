@@ -130,7 +130,7 @@ export default function Home() {
               Chandler and Sully are getting married!
             </h2>
             <img
-              src="/US-WC-Alter.png"
+              src="/Us-WC-Alter.png"
               alt="Couple"
               className="w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg object-contain"
             />
