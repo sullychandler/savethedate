@@ -125,16 +125,20 @@ export default function Home() {
       // 1) Final text + couple image
       case 1:
         return (
-          <div className="flex flex-col items-center text-center px-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-6">
-              Chandler and Sully are getting married!
-            </h2>
-            <img
-              src="/Us-WC-Alter.png"
-              alt="Couple"
-              className="w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg object-contain"
-            />
-          </div>
+          <div className="flex flex-col items-center text-center px-4 py-8 max-w-xl mx-auto">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-6">
+    Chandler and Sully are getting married!
+  </h2>
+  <img
+    src="/Us-WC-Alter.png"
+    alt="Couple"
+    className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg object-contain mb-6"
+  />
+  <p className="text-white text-lg sm:text-xl md:text-2xl">
+    Save the date for our special day!
+  </p>
+</div>
+
         );
 
       // 2) Venue
