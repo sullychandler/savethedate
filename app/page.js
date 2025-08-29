@@ -125,16 +125,17 @@ export default function Home() {
       // 1) Final text + couple image
       case 1:
         return (
-          <div className="flex flex-col items-center text-center px-4 py-8 max-w-xl sm:max-w-2xl mx-auto">
-  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white drop-shadow-lg mb-4">
-    Chandler and Sully are getting married!
+          <div className="flex flex-col items-center text-center px-4 py-8 max-w-3xl mx-auto">
+  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white drop-shadow-lg mb-4">
+    Chandler and Sully <br /> are getting married!
   </h2>
   <img
     src="/Us-WC-Alter.png"
     alt="Couple"
-    className="w-full max-w-[200px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[500px] rounded-lg object-contain mb-4"
+    className="w-full max-w-[250px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[500px] rounded-lg object-contain mb-4"
   />
 </div>
+
 
 
 
