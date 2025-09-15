@@ -125,19 +125,19 @@ export default function Home() {
       // 1) Final text + couple image
       case 1:
         return (
-          <div className="flex flex-col items-center text-center px-4 py-8 w-full max-w-4xl mx-auto">
+          <div className="flex flex-col items-center text-center px-4 py-8 max-w-xl mx-auto">
   <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-6">
-    Chandler and Sully <br /> are getting married!
+    Chandler and Sully are getting married!
   </h2>
   <img
     src="/Us-WC-Alter.png"
     alt="Couple"
-    className="w-full max-w-4xl max-h-[60vh] rounded-lg object-contain mb-6"
+    className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg object-contain mb-6"
   />
+  <p className="text-white text-lg sm:text-xl md:text-2xl">
+    Save the date for our special day!
+  </p>
 </div>
-
-
-
 
         );
 
@@ -162,20 +162,20 @@ export default function Home() {
       // 3) Final single image + text
       case 3:
         return (
-          <div className="relative w-full h-full flex items-center justify-center px-4">
+          <div className="flex flex-col items-center text-center px-4">
             <img
               src="/Admirals-Us-WC.png"
               alt="Venue watercolor with couple"
-              className="w-full max-w-4xl max-h-[85vh] rounded-xl object-contain"
+              className="w-full max-w-4xl max-h-[70vh] rounded-xl object-contain mb-4"
             />
-            <h2 className="absolute bottom-16 sm:bottom-12 left-1/2 -translate-x-1/2 text-2xl sm:text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white drop-shadow-lg mb-2">
               Formal Invitations to Follow
             </h2>
             <a
               href="https://www.theknot.com/chandlerandsully"
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute bottom-4 sm:bottom-2 left-1/2 -translate-x-1/2 text-xl sm:text-2xl md:text-2xl font-extrabold text-white drop-shadow-lg underline text-center"
+              className="text-lg sm:text-xl md:text-2xl font-extrabold text-white drop-shadow-lg underline"
             >
               Visit our wedding website
             </a>
