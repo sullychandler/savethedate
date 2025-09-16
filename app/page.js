@@ -129,10 +129,11 @@ export default function Home() {
               Chandler and Sully are getting married!
             </h2>
             <img
-              src="/Us-WC-Alter.png"
-              alt="Couple"
-              className="w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg object-contain mb-1"
-            />
+  src="/Us-WC-Alter.png"
+  alt="Couple"
+  className="w-full max-w-md rounded-lg object-contain mb-3"
+  style={{ maxHeight: "50vh" }}
+/>
             <p className="text-white text-lg sm:text-xl font-extrabold md:text-2xl">
               Save the date for our special day!
             </p>
