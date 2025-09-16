@@ -9,14 +9,13 @@ export default function Home() {
 
   const lastScrollRef = useRef(0);
   const touchStartYRef = useRef(null);
-  const maxIndex = 3; // adjusted for removed sections
+  const maxIndex = 3; // Number of sections
 
   // Scroll/swipe sensitivity
   const SCROLL_DELAY = 900;
   const WHEEL_DELTA_THRESHOLD = 70;
   const TOUCH_SWIPE_THRESHOLD =
     typeof window !== "undefined" && window.innerWidth < 768 ? 50 : 70;
-
 
   const goNext = () => {
     setSection((prev) => {
@@ -112,7 +111,7 @@ export default function Home() {
 
   const renderSection = (i) => {
     switch (i) {
-      // 0) Save the date
+      // 0) Save the Date
       case 0:
         return (
           <div className="flex flex-col items-center justify-center text-center px-4">
@@ -126,19 +125,18 @@ export default function Home() {
       case 1:
         return (
           <div className="flex flex-col items-center text-center px-4 py-8 max-w-xl mx-auto">
-  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-6">
-    Chandler and Sully are getting married!
-  </h2>
-  <img
-    src="/Us-WC-Alter.png"
-    alt="Couple"
-    className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg object-contain mb-6"
-  />
-  <p className="text-white text-lg sm:text-xl md:text-2xl">
-    Save the date for our special day!
-  </p>
-</div>
-
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-3">
+              Chandler and Sully are getting married!
+            </h2>
+            <img
+              src="/Us-WC-Alter.png"
+              alt="Couple"
+              className="w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg object-contain mb-1"
+            />
+            <p className="text-white text-lg sm:text-xl font-extrabold md:text-2xl">
+              Save the date for our special day!
+            </p>
+          </div>
         );
 
       // 2) Venue
@@ -151,7 +149,7 @@ export default function Home() {
             <img
               src="/Admirals-WC.png"
               alt="Venue watercolor"
-              className="w-full max-w-xl rounded-xl shadow-lg opacity-90 object-contain"
+              className="w-full h-auto max-w-xl rounded-xl shadow-lg opacity-90 object-contain mb-4"
             />
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white drop-shadow-lg mt-4">
               The Admiral&apos;s House, Seattle, WA
@@ -160,27 +158,28 @@ export default function Home() {
         );
 
       // 3) Final single image + text
-      case 3:
-        return (
-          <div className="flex flex-col items-center text-center px-4">
-            <img
-              src="/Admirals-Us-WC.png"
-              alt="Venue watercolor with couple"
-              className="w-full max-w-4xl max-h-[70vh] rounded-xl object-contain mb-4"
-            />
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white drop-shadow-lg mb-2">
-              Formal Invitations to Follow
-            </h2>
-            <a
-              href="https://www.theknot.com/chandlerandsully"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg sm:text-xl md:text-2xl font-extrabold text-white drop-shadow-lg underline"
-            >
-              Visit our wedding website
-            </a>
-          </div>
-        );
+case 3:
+  return (
+    <div className="flex flex-col items-center text-center px-4">
+      <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white drop-shadow-lg mb-4">
+        Formal Invitations to Follow
+      </h2>
+      <img
+        src="/Admirals-Us-WC.png"
+        alt="Venue watercolor with couple"
+        className="w-full max-w-4xl max-h-[70vh] rounded-xl object-contain mb-4"
+      />
+      <a
+        href="https://www.theknot.com/chandlerandsully"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-lg sm:text-xl md:text-3xl font-extrabold text-white drop-shadow-lg underline mt-1"
+      >
+        Visit our wedding website
+      </a>
+    </div>
+  );
+
 
       default:
         return null;
@@ -195,8 +194,11 @@ export default function Home() {
         style={{ backgroundImage: "url('/Animated-Clouds2.png')" }}
         aria-hidden
       />
-      {/* Fullscreen container */}
-      <div className="fixed inset-0 w-screen h-screen overflow-hidden flex items-center justify-center p-4 sm:p-6">
+      {/* Fullscreen container with auto-scroll for mobile */}
+      <div
+        className="fixed inset-0 w-screen fullscreen-fix flex items-center justify-center p-4 sm:p-6"
+        style={{ overflow: "auto", WebkitOverflowScrolling: "touch" }}
+      >
         <AnimatePresence initial={false} mode="wait" custom={direction}>
           <motion.div
             key={section}
